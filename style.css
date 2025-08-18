@@ -1,0 +1,316 @@
+body {
+  padding: 0;
+  margin: 0 100px;
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  /* text-align: center; */
+}
+
+/* what i offer */
+#whatIOffer {
+  /* padding: 60px 0; */
+  margin-top: 60px;
+}
+
+.scrolling-wrapper
+.scroll-track {
+  overflow: visible !important;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-track {
+  display: flex;  
+  width: 100% !important;
+  /* animation: scroll-left 25s linear infinite; */
+}
+
+.scroll-track .row {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);  /* 5 across on desktop */
+  gap: 12px;                               /* even spacing without overflow */
+  margin: 0;                               
+}
+
+/* Mobile: exactly 2 per row */
+@media (max-width: 767.98px) {
+  .scroll-track .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.offer-box {
+  flex: 0 0 auto;
+  width: 180px;
+  margin: 0px 15px;
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(27, 27, 27, 0.08);
+  transition: transform 0.3s;
+}
+
+.offer-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.offer-box:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: Hide scrollbar */
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+.slide-in {
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* heading */
+#heading {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+#editorBtn {
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 80px;
+  font-size: 22px;
+  margin: 30px 30px;
+}
+
+/* about me */
+
+
+#aboutMe,
+#desc {
+  padding: 30px 0;
+}
+
+#aboutMe .rows,
+#desc .rows {
+  display: flex;
+  align-items: stretch;
+  /* Makes both columns same height */
+}
+
+#aboutMe .col-md-6,
+#desc .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#aboutImg {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.personImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+  display: block;
+  border-radius: 8px;
+}
+
+#aboutMe p {
+  font-size: 22px;
+}
+
+/* experience */
+#myBackground {
+  line-height: 1.8;
+}
+
+#myBackground .offers {
+  font-size: 22px;
+}
+
+#myBackground h3 {
+  font-size: 40px;
+}
+
+#myBackground li {
+  font-size: 15px;
+}
+
+#experienceDiv {
+  margin-top: 100px;
+}
+
+/* my arts */
+#myArts {
+  margin: 50px 0px;
+}
+
+#videoCarousel iframe,
+#videoCarouselNew iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+
+#videoCarousel video,
+#videoCarouselNew video {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.video-track,
+.video-track-new {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Overlay covers video and handles clicks */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.video-overlay:active {
+  background: rgba(0, 0, 0, 0.05);
+  /* tiny feedback effect */
+}
+
+.video-wrapper {
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: transparent;
+  z-index: 2;
+}
+
+.gdrive-video {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+
+/* forms */
+#forms {
+  background-color: #f3f3f3;
+  color: #000;
+  padding: 30px 30px;
+  border-radius: 30px;
+}
+
+#reachOut .container {
+  margin-top: 50px;
+}
+
+#reachOut .social {
+  padding: 25px 0px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#reachOut a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#reachOut a:hover {
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-color: #e9e9e9;
+  color: #000;
+}
+
+.fade-up-on-scroll {
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1.3s ease-out;
+}
+
+.fade-up-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive site */
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .offer-box {
+    min-width: 120px;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* about me  */
+  #aboutMe p {
+    margin: auto;
+    text-align: center;
+  }
+}
