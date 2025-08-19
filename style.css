@@ -23,7 +23,7 @@ body {
 .scroll-track {
   display: flex;  
   width: 100% !important;
-  /* animation: scroll-left 25s linear infinite; */
+  
 }
 
 .scroll-track .row {
@@ -39,7 +39,24 @@ body {
 @media (max-width: 767.98px) {
   .scroll-track .row {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 5px;
+  }
+
+  .offer-box {
+    width: 140px;          /* narrower box */
+    padding: 12px;         /* less padding */
+    margin: 10px auto;     /* auto centers in 2-column grid */
+    border-radius: 10px;   /* slightly smaller radius */
+  }
+
+  .offer-box img {
+    width: 45px;   /* smaller icon */
+    height: 45px;
+    margin-bottom: 6px;
+  }
+
+  .offer-box h5 {
+    font-size: 14px;   /* smaller text */
   }
 }
 
