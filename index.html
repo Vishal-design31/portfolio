@@ -160,7 +160,8 @@
 
                         <iframe class="vimeo-player"
                             src="https://player.vimeo.com/video/1110220932?autoplay=0&autopause=0&title=0&byline=0&portrait=0&dnt=1&muted=0"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                        </iframe>
                     </div>
 
                     <div class="col-12 col-md-4 px-2 video-wrapper">
@@ -182,9 +183,15 @@
                     </div>
 
                     <div class="col-12 col-md-4 px-2 video-wrapper">
-
-                        <iframe class="vimeo-player" src="https://player.vimeo.com/video/1110221096?autoplay=0&muted=0"
-                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                        <div class="vimeo-container">
+                            <iframe class="vimeo-player" src="https://player.vimeo.com/video/1112294254?autoplay=0&muted=0"
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                            <!-- Optional overlay to hide branding -->
+                            <div class="branding-overlay"></div>
+                        </div>
                     </div>
 
                     <div class="col-12 col-md-4 px-2 video-wrapper">
@@ -305,7 +312,8 @@
         <div class="container mb-4">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <form id="forms" action="https://submit-form.com/bdPy3A32j" method="POST" target="hidden_iframe" onsubmit="showSuccessModal()">
+                    <form id="forms" action="https://submit-form.com/bdPy3A32j" method="POST" target="hidden_iframe"
+                        onsubmit="showSuccessModal()">
                         <input type="hidden" name="_redirect" value="http://127.0.0.1:5501/index.html" />
                         <div class="mb-3">
                             <label for="exampleInputName" class="form-label">Full Name <i
