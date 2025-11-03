@@ -28,7 +28,7 @@ body {
 
 .scroll-track .row {
   display: grid !important;
-  grid-template-columns: repeat(6, minmax(0, 1fr));  /* exactly 6 columns */
+  grid-template-columns: repeat(7, minmax(0, 1fr));  /* exactly 6 columns */
   gap: 15px;   /* spacing between items */
   margin: 0 auto;  /* center grid inside parent */
   max-width: 100%; /* prevent overflow */
